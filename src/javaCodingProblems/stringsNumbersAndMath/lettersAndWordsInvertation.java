@@ -5,17 +5,16 @@ import java.util.List;
 import java.util.Scanner;
 
 public class lettersAndWordsInvertation {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the string which you want to explore");
-        String [] line = sc.nextLine().split("");
         List<String> reverseWordsList = new ArrayList<>();
+        System.out.println("Enter line with which you want to work");
+        String [] line = sc.nextLine().split("");
         for(int i = line.length - 1; i >= 0; i-- ) {
             reverseWordsList.add(line[i]);
         }
-        for(String item : reverseWordsList) {
-            System.out.print(item);
+        for(int j = 0; j < reverseWordsList.size(); j++) {
+            System.out.print(reverseWordsList.get(j));
         }
 
     }

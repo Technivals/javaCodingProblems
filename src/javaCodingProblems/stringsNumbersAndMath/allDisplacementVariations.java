@@ -8,26 +8,26 @@ public class allDisplacementVariations {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter line with which you want to work");
         String line = sc.nextLine();
-        int n = line.length();
-        permute(line, 0, n - 1);
+        int len = line.length();
+        permute(line, 0, len - 1);
     }
 
-    private static void permute(String str, int l, int r)
+    private static void permute(String line, int start, int len)
     {
-        if (l == r)
-            System.out.println(str);
+        if (start == len)
+            System.out.println(line);
         else {
-            for (int i = l; i <= r; i++) {
-                str = swap(str, l, i);
-                permute(str, l + 1, r);
-                str = swap(str, l, i);
+            for (int i = start; i <= len; i++) {
+                line = swap(line, start, i);
+                permute(line, start + 1, len);
+                line = swap(line, start, i);
             }
         }
     }
-    public static String swap(String a, int i, int j)
+    public static String swap(String line, int i, int j)
     {
         char temp;
-        char[] charArray = a.toCharArray();
+        char[] charArray = line.toCharArray();
         temp = charArray[i];
         charArray[i] = charArray[j];
         charArray[j] = temp;

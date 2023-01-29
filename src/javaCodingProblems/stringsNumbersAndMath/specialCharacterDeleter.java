@@ -6,15 +6,15 @@ public class specialCharacterDeleter {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        StringBuilder uniqueLine = new StringBuilder();
         System.out.println("Enter line with which you want to work");
         String [] line = sc.nextLine().split(" ");
-        System.out.println("Enter character copies of which you want to delete ");
+        System.out.println("Enter character, copies of which you want to delete ");
         String uniqueSymbol = sc.nextLine();
-        StringBuilder uniqueLine = new StringBuilder();
-        for (String s : line){
-            for (int i = 0; i < s.length(); i++){
-                if(uniqueSymbol.charAt(0) != s.charAt(i)){
-                    uniqueLine.append(s.charAt(i));
+        for (int s = 0; s < line.length; s++){
+            for (int i = 0; i < line[s].length(); i++){
+                if(uniqueSymbol.charAt(0) != line[s].charAt(i)){
+                    uniqueLine.append(line[s].charAt(i));
                 }
             }
             uniqueLine.append(" ");

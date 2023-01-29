@@ -9,13 +9,13 @@ public class theMostCommonCharacter {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter line with which you want to work");
-        String line = sc.nextLine().toLowerCase();
-        char [] characters = line.toCharArray();
         int tempCount = 0;
         int trueCount = 0;
         List<Character> mostCommonChars = new ArrayList<>();
         List<Character> usedSymbols = new ArrayList<>();
+        System.out.println("Enter line with which you want to work");
+        String line = sc.nextLine().toLowerCase();
+        char [] characters = line.toCharArray();
         usedSymbols.add(' ');
         for (char ch1 : characters){
             if(!usedSymbols.contains(ch1)) {

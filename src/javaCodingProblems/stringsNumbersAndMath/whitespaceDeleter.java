@@ -6,9 +6,9 @@ public class whitespaceDeleter {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter string which you want to explore");
-        String [] lineArray = sc.nextLine().split(" ");
         StringBuilder lineWithoutWhitespace = new StringBuilder();
+        System.out.println("Enter line with which you want to work");
+        String [] lineArray = sc.nextLine().split(" ");
         for(String item: lineArray){
             lineWithoutWhitespace.append(item);
         }

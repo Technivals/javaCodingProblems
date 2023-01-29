@@ -6,9 +6,8 @@ public class onlyNumberChecker {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter string which you want to explore");
-        String line = sc.nextLine();
-        String [] words = line.split(" ");
+        System.out.println("Enter line with which you want to work");
+        String [] words = sc.nextLine().split(" ");
         for(String item : words) {
             if (!item.matches("^[0-9]+$")) {
                 System.out.println("Line has not only numbers");
