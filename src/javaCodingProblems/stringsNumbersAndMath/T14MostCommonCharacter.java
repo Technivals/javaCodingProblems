@@ -1,11 +1,10 @@
 package javaCodingProblems.stringsNumbersAndMath;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class theMostCommonCharacter {
+public class T14MostCommonCharacter {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

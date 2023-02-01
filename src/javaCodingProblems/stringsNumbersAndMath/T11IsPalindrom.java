@@ -1,10 +1,8 @@
 package javaCodingProblems.stringsNumbersAndMath;
 
-import java.util.Arrays;
-import java.util.Objects;
 import java.util.Scanner;
 
-public class IsPalindrom {
+public class T11IsPalindrom {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

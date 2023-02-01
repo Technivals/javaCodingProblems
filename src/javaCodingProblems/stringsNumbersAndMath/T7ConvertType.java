@@ -2,7 +2,7 @@ package javaCodingProblems.stringsNumbersAndMath;
 
 import java.util.Scanner;
 
-public class convertType {
+public class T7ConvertType {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

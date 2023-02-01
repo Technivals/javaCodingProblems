@@ -2,7 +2,7 @@ package javaCodingProblems.stringsNumbersAndMath;
 
 import java.util.Scanner;
 
-public class stringWithSymbolConnector {
+public class T9StringConnector {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
