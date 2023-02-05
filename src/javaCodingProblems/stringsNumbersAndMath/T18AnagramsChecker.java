@@ -16,16 +16,20 @@ public class T18AnagramsChecker {
         if(wrds.length == 2) {
             char[] wrd1Array = wrds[0].toCharArray();
             char[] wrd2Array = wrds[1].toCharArray();
-            for (int c = 0; c < wrds[0].length(); c++) {
-                wrd1List.add(wrd1Array[c]);
-                wrd2List.add(wrd2Array[c]);
-            }
-            for (int j = 0; j < wrd1Array.length; j++) {
-                wrd1List.remove(Character.valueOf(wrd1Array[j]));
-                wrd2List.remove(Character.valueOf(wrd1Array[j]));
+            if (wrd1Array.length == wrd2Array.length) {
+                for (int c = 0; c < wrds[0].length(); c++) {
+                    wrd1List.add(wrd1Array[c]);
+                    wrd2List.add(wrd2Array[c]);
                 }
-            if (wrd1List.isEmpty() && wrd2List.isEmpty()) {
-                System.out.println("Your words are anagrams");
+                for (int j = 0; j < wrd1Array.length; j++) {
+                    wrd1List.remove(Character.valueOf(wrd1Array[j]));
+                    wrd2List.remove(Character.valueOf(wrd1Array[j]));
+                }
+                if (wrd1List.isEmpty() && wrd2List.isEmpty()) {
+                    System.out.println("Your words are anagrams");
+                } else {
+                    System.out.println("Your words aren't anagrams");
+                }
             } else {
                 System.out.println("Your words aren't anagrams");
             }
