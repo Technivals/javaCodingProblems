@@ -11,7 +11,8 @@ public class T22CommonPrefixFinder {
         boolean endPrefix = false;
         char ch = ' ';
         System.out.println("Enter the words in which you want to find a common prefix");
-        String [] words = sc.nextLine().split(" ");
+        String line = sc.nextLine().toLowerCase();
+        String [] words = line.split(" ");
         Arrays.sort(words, (s1, s2) -> s1.length() - s2.length());
         for (int i = 0; i < words[0].length(); i++) {
             ch = words[0].charAt(i);
