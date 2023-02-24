@@ -23,12 +23,15 @@ public class T26TooBigSumException {
             System.out.println("You entered not a number");
             System.exit(0);
         }
-        try {
-            sum = firstNumber + secondNumber;
-        } catch (ArithmeticException e) {
-            System.out.println("Sum of your values is too big or too small");
-            System.exit(0);
+        sum = firstNumber + secondNumber;
+        if (firstNumber > 0 && secondNumber > 0 && sum < 0) {
+            throw new ArithmeticException("Sum of your values is too big or too small");
+        } else if (firstNumber < 0 || secondNumber < 0 && sum > 0) {
+            throw new ArithmeticException("Sum of your values is too big or too small");
+        } else if (firstNumber < 0 && secondNumber < 0 && sum < 0) {
+            throw new ArithmeticException("Sum of your values is too big or too small");
+        } else {
+            System.out.println("Sum of your values is " + sum);
         }
-        System.out.println("Sum of your values is " + sum);
     }
 }
