@@ -10,6 +10,9 @@ public class T39CompactNumFormatting {
         long thousand = 1000;
         long million = 1000000;
         long billion = 1000000000;
+        long maxBillion = billion * 999;
+        maxBillion = maxBillion + 999999999;
+        System.out.println(maxBillion);
         System.out.println("Enter whole positive number which you want to formatting");
         String input = sc.nextLine();
         try {
@@ -25,6 +28,8 @@ public class T39CompactNumFormatting {
             } else if (number >= billion) {
                 int amount = (int) (number / billion);
                 System.out.println("Your formatted number is " + amount + "B");
+            } else if (number > maxBillion) {
+                System.out.println("You enter too big number");
             }
         } catch (Exception e) {
             System.out.println("Formatting error");
