@@ -21,9 +21,8 @@ public class T41NullsCheckerAndCustomNPE {
         String nullCatcher = "";
         for (String item : sequence) {
             if (item == null) {
-                throw new NullPointerException("You enterув null value in your sequence");
+                throw new NullPointerException("You entered null value in your sequence");
             }
-            nullCatcher = item;
-            }
+        }
     }
 }

@@ -21,11 +21,11 @@ public class T40NullsChecker {
         }
         System.out.println("Enter the style in which you want to check the sequence on null values(imperative/functional)");
         switch (sc.nextLine()) {
-            case "imperative":
-                imperativeStyle(sequence);
-                break;
             case "functional":
                 functionalStyle(sequence);
+                break;
+            case "imperative":
+                imperativeStyle(sequence);
                 break;
             default:
                 System.out.println("You entered wrong style");

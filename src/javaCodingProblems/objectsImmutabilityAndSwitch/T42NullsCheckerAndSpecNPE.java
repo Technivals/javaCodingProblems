@@ -23,7 +23,6 @@ public class T42NullsCheckerAndSpecNPE {
             if (item == null) {
                 throw new IllegalAccessException("You have entered an impossible value");
             }
-            nullCatcher = item;
         }
     }
 }
