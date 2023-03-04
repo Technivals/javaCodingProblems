@@ -9,8 +9,8 @@ public class T2FirstUniqueChar {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        List<Character> charList = new ArrayList<>();
         int count = 0;
+        List<Character> charList = new ArrayList<>();
         System.out.println("Enter line with which you want to work");
         String [] line = sc.nextLine().split(" ");
         for (int s = 0; s < line.length; s++) {
