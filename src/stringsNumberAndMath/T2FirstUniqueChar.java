@@ -1,4 +1,4 @@
-package javaCodingProblems;
+package javaCodingProblems.stringsNumbersAndMath;
 
 import java.util.ArrayList;
 import java.util.List;

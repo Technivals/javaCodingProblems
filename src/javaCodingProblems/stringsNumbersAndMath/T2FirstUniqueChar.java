@@ -1,16 +1,15 @@
-package javaCodingProblems;
+package javaCodingProblems.stringsNumbersAndMath;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class T1SimilarCharCounter {
+public class T2FirstUniqueChar {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         List<Character> charList = new ArrayList<>();
-        List<Character> checkList = new ArrayList<Character>();
         int count = 0;
         System.out.println("Enter line with which you want to work");
         String [] line = sc.nextLine().split(" ");
@@ -20,16 +19,17 @@ public class T1SimilarCharCounter {
             }
         }
         for (int i = 0; i < charList.size(); i++) {
-            if (!checkList.contains(charList.get(i))) {
-                for (int j = 0; j < charList.size(); j++) {
-                    if (charList.get(i) == charList.get(j)) {
-                        count++;
-                    }
+            for (int j = 0; j < charList.size(); j++) {
+                if (charList.get(i) == charList.get(j)) {
+                    count++;
                 }
-                checkList.add(charList.get(i));
-                count--;
+            }
+            if(count == 1){
+                System.out.println("The first unique char in your line is: " + charList.get(i));
+                break;
+            } else {
+                count = 0;
             }
         }
-        System.out.println("The number of similar char in your string is: " + count);
     }
 }
