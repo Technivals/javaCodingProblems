@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class T42NullsCheckerAndSpecNPE {
+public class T42NullsCheckerAndSpecExc {
 
     public static void main(String[] args) throws IllegalAccessException {
         Scanner sc = new Scanner(System.in);
@@ -21,7 +21,7 @@ public class T42NullsCheckerAndSpecNPE {
         String nullCatcher = "";
         for (String item : sequence) {
             if (item == null) {
-                throw new IllegalAccessException("You have entered an impossible value");
+                throw new IllegalArgumentException("You have entered an impossible value");
             }
         }
     }
