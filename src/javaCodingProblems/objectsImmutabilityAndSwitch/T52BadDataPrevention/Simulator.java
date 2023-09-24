@@ -12,10 +12,10 @@ public class Simulator {
     public static void main(String[] args) {
         Application application;
         Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
-        Application.ApplicationBuilder application1 = Application.getBuilder("koka", "kokovenko", 1);
-        Application.ApplicationBuilder application2 = Application.getBuilder("kekes", "kekesovych", 2).
+        Application.ApplicationBuilder application1 = Application.getBuilder("Josh", "Martin", 1);
+        Application.ApplicationBuilder application2 = Application.getBuilder("Jack", "Hardy", 2).
                 specialisation("Cyber");
-        Application.ApplicationBuilder application3 = Application.getBuilder("man", "pan", 3)
+        Application.ApplicationBuilder application3 = Application.getBuilder("David", "Cross", 3)
                 .specialisation("Economy").grade("bachelor");
         final Set <ConstraintViolation<Application.ApplicationBuilder>> violations = validator.validate(application1);
         if (violations.isEmpty()) {
